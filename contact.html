@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <meta name="viewport" content="with=device-width, initial-scale=1.0">
+            <title>Tech ABHI</title>
+			<link rel="stylesheet" href="style.css">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="Sub-header">
+    <nav>
+		<a href="index.html"><img src="images/AI2 logo.jpg"></a>
+		<div class="nav-links" id="navLinks">
+			<i class="fa fa-times" onclick="hideMenu()"></i>
+			<ul>
+			    <li><a href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="course.html">COURSE</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+	</nav>
+	<h1>Contact Us</h1>
+
+</section>
+
+<!---------- content us -------->
+
+<section class="location">
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15593.949820794169!2d76.604686!3d12.2829252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf651b028ebfd1%3A0x5486828ab098787b!2sABHI%20Integral!5e0!3m2!1sen!2sin!4v1721201043041!5m2!1sen!2sin" 
+	width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+	referrerpolicy="no-referrer-when-downgrade"></iframe>
+	
+</section>
+
+<section class="contact-us">
+
+	<div class="row">
+		<div class="contact-col">
+			<div>
+				<i class="fa fa-home"></i>
+				<span>
+					<h5>xyz road, abc Building</h5>
+					<p>Mysuru, karnataka, India.</p>
+				</span>
+			</div>
+			<div>
+				<i class="fa fa-phone"></i>
+				<span>
+					<h5>+91 9972415757</h5>
+					<p>Monday to saturday, 10AM to 8PM. <br> lunch break, 2PM to 4PM.</p>
+				</span>
+			</div>
+			<div>
+				<i class="fa fa-envelope-o"></i>
+				<span>
+					<h5>sandeshprinters2211@gmail.com</h5>
+					<p>Email us your Query.</p>
+				</span>
+			</div>
+		</div>
+		<div class="contact-col">
+			<form action="form-handler.php" method="post">
+				<input type="text" name="name" placeholder="Enter your name" required>
+				<input type="email" name="email" placeholder="Enter Email Address" required>
+				<input type="text" name="subject" placeholder="Enter your subject" required>
+				<textarea rows="8" name="message" placeholder="Message" required></textarea>
+				<button typpe="Submit" class="hero-btn red-btn">Send Message</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<!----------footer----------->
+
+<section class="footer">
+	<h4>About Us</h4>
+	<p>The University of London is the UK’s leading provider of digital and blended distance education 
+		internationally, offering programmes to 45,000 students<br>in 190 countries around the world. 
+		Although proudly rooted in London, our community and impact are global.
+        We are a national leader in the humanities,<br>and we promote their value to society and 
+		the economy through knowledge creation and exchange.<br>We are also a federation of 17 esteemed
+		higher education institutions, with collaboration at the heart of our ethos.<br>
+		The University of London federation is a collective community of more than 240,000 learners and 
+		50,000 staff, delivering world-leading research across all disciplines.<br>Our passion for increasing 
+		access to education and mobilising the collective power<br>and expertise of the federation is central 
+		to our ability to transform lives around the world and address the global challenges of the future.
+		</p>
+		<div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-telegram"></i>
+			<i class="fa fa-youtube"></i>
+		</div>
+		<p>Made with <i class="fa fa-heart-o"></i> by Abhilash Hebbar M.U.<br> Designed and Developed by Tech ABHI. all rights reserved</p>
+</section>
+
+
+<!-----------JavaScript for Toggle Menu------------------------------------->
+<script>
+
+	var navlinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

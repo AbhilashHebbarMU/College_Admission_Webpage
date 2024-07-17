@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admission Application</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="application-form">
+		<h1>College Admission Application</h1>
+		<form id="application-form">
+			<!-- Personal Information -->
+			<h2>Personal Information</h2>
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone:</label>
+				<input type="tel" id="phone" name="phone" required>
+			</div>
+
+			<!-- Academic Information -->
+			<h2>Academic Information</h2>
+			<div class="form-group">
+				<label for="high-school">High School:</label>
+				<input type="text" id="high-school" name="high-school" required>
+			</div>
+			<div class="form-group">
+				<label for="gpa">GPA:</label>
+				<input type="number" id="gpa" name="gpa" required>
+			</div>
+			<div class="form-group">
+				<label for="sat-score">SAT Score:</label>
+				<input type="number" id="sat-score" name="sat-score" required>
+			</div>
+
+			<!-- Course Selection -->
+			<h2>Course Selection</h2>
+			<div class="form-group">
+				<label for="course">Course:</label>
+				<select id="course" name="course" required>
+					<option value="">Select a course</option>
+					<option value="CSE">CSE</option>
+					<option value="CSE(AI/ML)">CSE(AI/ML)</option>
+					<option value="CSE(Data Science)">CSE(Data Science)</option>
+					<option value="CSE(Design)">CSE(Design)</option>
+					<option value="CSE(Syber Security)">CSE(Syber Security)</option>
+					<option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CV">CV</option>
+                    <option value="ME">ME</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+				</select>
+			</div>
+
+			<!-- Essay -->
+			<h2>Essay</h2>
+			<div class="form-group">
+				<label for="essay">Please write a short essay (max 500 words) on why you want to attend our college:</label>
+				<textarea id="essay" name="essay" required></textarea>
+			</div>
+
+			<!-- Submit Button -->
+			<button type="submit">Submit Application</button>
+		</form>
+	</section>
+
+	<!-- JavaScript -->
+	<script src="script.js"></script>
+</body>
+</html>

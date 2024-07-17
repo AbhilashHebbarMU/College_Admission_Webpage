@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech ABHI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Add some basic styling to the login form */
+        .login {
+            max-width: 400px; /* Set a maximum width for the login form */
+            margin: 40px auto; /* Center the login form horizontally */
+            padding: 20px; /* Add some padding to the login form */
+            background-color: #f9f9f9; /* Set a light gray background color */
+            border: 1px solid #ccc; /* Add a border to the login form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+        
+        .login label {
+            display: block; /* Display labels as block elements */
+            margin-bottom: 10px; /* Add some space between labels and inputs */
+        }
+        
+        .login input[type="text"], .login input[type="password"] {
+            width: 100%; /* Make inputs full-width */
+            padding: 10px; /* Add some padding to inputs */
+            margin-bottom: 20px; /* Add some space between inputs */
+            border: 1px solid #ccc; /* Add a border to inputs */
+        }
+        
+        .login input[type="submit"] {
+            background-color: #4CAF50; /* Set a green background color for the submit button */
+            color: #fff; /* Set white text color for the submit button */
+            padding: 10px 20px; /* Add some padding to the submit button */
+            border: none; /* Remove the border from the submit button */
+            border-radius: 5px; /* Add a subtle border radius to the submit button */
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+        
+        .login input[type="submit"]:hover {
+            background-color: #3e8e41; /* Set a darker green background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <section class="Sub-header">
+        <nav>
+            <a href="index.html"><img src="images/AI2 logo.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Login</h1>
+    </section>
+
+    <section class="login">
+        <h2>User Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <a href="admission.html"><input type="submit" value="Login"></a>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </section>
+
+    <section class="login">
+        <h2>Admin Login</h2>
+        <form>
+            <label for="admin-username">Admin Username:</label>
+            <input type="text" id="admin-username" name="admin-username"><br><br>
+            <label for="admin-password">Admin Password:</label>
+            <input type="password" id="admin-password" name="admin-password"><br><br>
+            <a href="admission.html"><input type="submit" value="Login"></a>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
