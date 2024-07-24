@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* Add some basic styling to the login form */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
         .login {
             max-width: 400px; /* Set a maximum width for the login form */
-            margin: 40px auto; /* Center the login form horizontally */
+            margin: 20px; /* Add some margin to the login form */
             padding: 20px; /* Add some padding to the login form */
             background-color: #f9f9f9; /* Set a light gray background color */
             border: 1px solid #ccc; /* Add a border to the login form */
@@ -62,31 +69,29 @@
         <h1>Login</h1>
     </section>
 
-    <section class="login">
-        <h2>User Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <a href="admission.html"><input type="submit" value="Login"></a>
-        </form>
-        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    <section class="login-container">
+        <div class="login">
+            <h2>User Login</h2><br><BR>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input href="admission.html" type="submit" value="Login">
+            </form>
+            <p>Don't have an account? please do -><a href="signup.html">Sign up</a> to this.</p>
+        </div>
+        <div class="login">
+            <h2>Admin Login</h2><br><BR>
+            <form>
+                <label for="admin-username">Admin Username:</label>
+                <input type="text" id="admin-username" name="admin-username"><br><br>
+                <label for="admin-password">Admin Password:</label>
+                <input type="password" id="admin-password" name="admin-password"><br><br>
+                <input href="admission.html" type="submit" value="Login">
+            </form>
+            <p>Don't have an account? please contact the university</a></p>
+        </div>  
     </section>
-
-    <section class="login">
-        <h2>Admin Login</h2>
-        <form>
-            <label for="admin-username">Admin Username:</label>
-            <input type="text" id="admin-username" name="admin-username"><br><br>
-            <label for="admin-password">Admin Password:</label>
-            <input type="password" id="admin-password" name="admin-password"><br><br>
-            <label for="admin-password">Instituion Password:</label>
-            <input type="password" id="admin-password" name="admin-password"><br><br>
-            <a href="admission.html"><input type="submit" value="Login"></a>
-        </form>
-    </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
