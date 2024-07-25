@@ -1,32 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <meta name="viewport" content="with=device-width, initial-scale=1.0">
-            <title>Tech ABHI</title>
-			<link rel="stylesheet" href="style.css">
-			<link rel="preconnect" href="https://fonts.gstatic.com">
-			<link href="https://fonts.googleapis.com/css2?family=poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech ABHI - Admin View</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+        }
+        
+        .filter-box {
+            margin-bottom: 20px;
+        }
+        
+        .filter-box input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .filter-box button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .filter-box button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 <body>
-<section class="Sub-header">
-    <nav>
-		<a href="index.html"><img src="images/AI2 logo.jpg"></a>
-		<div class="nav-links" id="navLinks">
-			<i class="fa fa-times" onclick="hideMenu()"></i>
-			<ul>
-			    <li><a href="index.html">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="course.html">COURSE</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
-			</ul>
-		</div>
-		<i class="fa fa-bars" onclick="showMenu()"></i>
-	</nav>
-	<h1>Admin page</h1>
+    <section class="Sub-header">
+        <nav>
+            <a href="index.html"><img src="images/AI2 logo.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Admin View</h1>
+    </section>
 
-</section>
+    <section class="admin-view">
+        <h2>Applications</h2>
+        <div class="filter-box">
+            <input type="text" id="department-filter" placeholder="Filter by department">
+            <button type="submit" onclick="fetchData()">Filter</button>
+        </div>
+        <table id="applications-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>High School</th>
+                    <th>GPA</th>
+                    <th>SAT Score</th>
+                    <th>Course</th>
+                    <th>Essay</th>
+                </tr>
+            </thead>
+            <tbody id="applications-tbody">
+                <!-- Data will be displayed here -->
+            </tbody>
+        </table>
+    </section>
 
+    <script>
+        function fetchData() {
+            const departmentFilter = document.getElementById('department-filter').value;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'adminviewhandler.php?department=' + encodeURIComponent(departmentFilter), true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    document.getElementById('applications-tbody').innerHTML = this.responseText;
+                } else {
+                    console.error('Error fetching data');
+                }
+            };
+            xhr.send();
+        }
+
+        // Fetch data when the page loads
+        document.addEventListener('DOMContentLoaded', fetchData);
+    </script>
 </body>
 </html>
 
